@@ -37,6 +37,29 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/src/__tests__/fixtures",
+      "<rootDir>/src/__tests__/utils"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/containers/",
+      "<rootDir>/src/redux/store.js",
+      "<rootDir>/src/redux/reducer.js",
+      "<rootDir>/src/redux/middleware.js",
+      "<rootDir>/src/registerServiceWorker.js",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/App.jsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
   "devDependencies": {
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
