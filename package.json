@@ -5,6 +5,7 @@
   "dependencies": {
     "emotion": "^9.2.12",
     "react": "^16.6.1",
+    "react-app-rewire-emotion": "^4.0.0",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.1",
     "react-emotion": "^9.2.12",
@@ -44,7 +45,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.15.1",
-    "react-app-rewire-emotion": "^4.0.0"
+    "prettier": "^1.15.1"
   }
 }
