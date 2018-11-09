@@ -9,5 +9,8 @@
     "describe": true,
     "window": true,
     "document": true
+  },
+  "rules": {
+    "no-underscore-dangle": 0
   }
 }
