@@ -3,5 +3,11 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
+  },
+  "globals": {
+    "it": true,
+    "describe": true,
+    "window": true,
+    "document": true
   }
 }
