@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "emotion": "^9.2.12",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "react": "^16.6.1",
     "react-app-rewire-emotion": "^4.0.0",
     "react-app-rewired": "^1.6.2",
