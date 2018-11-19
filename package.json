@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "start:mock-api": "npx json-server --config src/mock/json-server src/mock/db.json",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "posttest": "yarn lint && yarn prettier:test && singel",
