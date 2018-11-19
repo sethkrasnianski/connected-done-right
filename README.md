@@ -45,4 +45,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Getting Started
 
-Copy sample `.env` to `.env.development`.
+- Copy sample `.env` to `.env.development`
+- Copy `/src/mock/db.sample.json` to `/src/mock/db.json`
