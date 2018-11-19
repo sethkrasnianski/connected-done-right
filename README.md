@@ -2,6 +2,7 @@
 
 ## Getting Started
 
+- Install node-foreman: `npm i -g node-foreman`
 - Copy sample `.env` to `.env.development`
 - Copy `/src/mock/db.sample.json` to `/src/mock/db.json`
 
