@@ -1,0 +1,42 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+
+attach_workspace: &attach_workspace
+  attach_workspace:
+      at: ~/connected-done-right
+
+jobs:
+  front-end-test:
+    docker:
+      - image: circleci/node:8.11.3
+        environment:
+          NODE_ENV: test
+
+    working_directory: ~/connected-done-right
+
+    steps:
+      - checkout:
+          path: ~/connected-done-right
+      - restore_cache:
+          keys:
+              - v1-node-api-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: node tests
+          command: |
+            yarn --frozen-lockfile
+            yarn test
+
+      - save_cache:
+          key: v1-node-api-cache-{{ checksum "yarn.lock" }}
+          paths:
+              - ~/api/node_modules
+              - ~/.yarn
+
+workflows:
+  version: 2
+  tests:
+    jobs:
+        - front-end-test
