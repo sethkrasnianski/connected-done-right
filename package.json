@@ -3,22 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "emotion": "^9.2.12",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "json-server": "^0.14.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.1",
+    "react-app-rewire-emotion": "^4.0.0",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.1",
     "react-emotion": "^9.2.12",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.0",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools": "^3.4.1",
+    "redux-logger": "^3.0.6",
+    "redux-pack": "^0.1.5",
+    "singel": "^0.5.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "nf start",
+    "start:front-end": "react-app-rewired start",
+    "start:mock-api": "npx json-server --config src/mock/json-server src/mock/db.json --routes src/mock/routes.json",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "posttest": "yarn lint && yarn prettier:test",
+    "posttest": "yarn lint && yarn prettier:test && singel",
     "eject": "react-app-rewired eject",
     "prettier": "prettier --write \"{src,cypress}/**/*.{js,jsx,ts,tsx,css,scss,vue,json,graphql,md,yaml}\" \"*.{js,jsx,ts,tsx,css,scss,vue,json,graphql,md,yaml}\"",
     "prettier:test": "yarn prettier --list-different",
-    "lint": "eslint --ignore-path ./.eslintignore --ext .jsx --ext .js, ./"
+    "lint": "eslint --ignore-path ./.eslintignore --ext .jsx --ext .js, ./",
+    "singel": "singel components/common/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +44,29 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/src/__tests__/fixtures",
+      "<rootDir>/src/__tests__/utils"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/containers/",
+      "<rootDir>/src/redux/store.js",
+      "<rootDir>/src/redux/reducer.js",
+      "<rootDir>/src/redux/middleware.js",
+      "<rootDir>/src/registerServiceWorker.js",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/App.jsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
+  },
   "devDependencies": {
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -37,7 +75,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.15.1",
-    "react-app-rewire-emotion": "^4.0.0"
+    "prettier": "^1.15.1"
   }
 }

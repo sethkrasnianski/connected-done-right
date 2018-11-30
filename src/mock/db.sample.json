@@ -1,0 +1,23 @@
+{
+  "group": [{ "id": 1, "name": "Projects" }],
+  "list": [{ "id": 1, "group_id": 1, "name": "PandA" }],
+  "todo": [
+    {
+      "id": 1,
+      "list_id": 1,
+      "name": "Setup GraphQL server",
+      "completed": false
+    }
+  ],
+  "link": [
+    {
+      "id": 1,
+      "list_id": 1,
+      "name": "Dynamo DB JS docs",
+      "url": "https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html"
+    }
+  ],
+  "note": [
+    { "id": 1, "list_id": 1, "name": "Thoughts", "markdown": "# Thoughts" }
+  ]
+}
