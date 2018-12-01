@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "connected-react-router": "^5.0.1",
     "emotion": "^9.2.12",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
