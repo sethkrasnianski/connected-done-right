@@ -1,7 +1,12 @@
 import React from "react";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
+import Groups from "components/groups";
 
-const Router = () => <h1>Router Entry</h1>;
+const Router = () => (
+  <Switch>
+    <Route exact path="/groups" component={Groups} />
+    <Redirect to="/groups" />
+  </Switch>
+);
 
-Router.propTypes = {};
-
-export default Router;
+export default withRouter(Router);

@@ -22,7 +22,8 @@
     "redux-devtools": "^3.4.1",
     "redux-logger": "^3.0.6",
     "redux-pack": "^0.1.5",
-    "singel": "^0.5.4"
+    "singel": "^0.5.4",
+    "tachyons-components": "^1.0.1"
   },
   "scripts": {
     "start": "nf start",
@@ -34,7 +35,7 @@
     "eject": "react-app-rewired eject",
     "prettier": "prettier --write \"{src,cypress}/**/*.{js,jsx,ts,tsx,css,scss,vue,json,graphql,md,yaml}\" \"*.{js,jsx,ts,tsx,css,scss,vue,json,graphql,md,yaml}\"",
     "prettier:test": "yarn prettier --list-different",
-    "lint": "eslint --ignore-path ./.eslintignore --ext .jsx --ext .js, ./",
+    "lint": "esw --ignore-path ./.eslintignore --ext .jsx --ext .js, ./",
     "singel": "singel components/common/*.js"
   },
   "eslintConfig": {
